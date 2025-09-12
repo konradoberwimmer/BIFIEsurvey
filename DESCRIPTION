@@ -1,10 +1,17 @@
 Package: BIFIEsurvey
 Type: Package
 Title: Tools for Survey Statistics in Educational Assessment
-Version: 3.7-1
-Date: 2024-04-26 09:30:14
-Author: BIFIE [aut], Alexander Robitzsch [aut, cre], 
-        Konrad Oberwimmer [aut]
+Version: 3.7-4
+Date: 2025-09-12 12:07:19
+Authors@R: c(person(family = "BIFIE",
+                        role = "aut"),
+                 person(given = "Alexander",
+                        family = "Robitzsch",
+                        role = c("aut", "cre"),
+                        email = "robitzsch@ipn.uni-kiel.de"),
+                 person(given = "Konrad",
+                        family = "Oberwimmer",
+                        role = "aut"))
 Maintainer: Alexander Robitzsch <robitzsch@ipn.uni-kiel.de>
 Description:
     Contains tools for survey statistics (especially in educational

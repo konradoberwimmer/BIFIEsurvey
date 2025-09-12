@@ -54,10 +54,10 @@ CHANGELOG BIFIEsurvey
 
 
 --------------------------------------------------------------------------
-VERSIONS BIFIEsurvey 3.7  |  2024-04-26  |  Last: BIFIEsurvey 3.7-1
+VERSIONS BIFIEsurvey 3.7  |  2025-09-12  |  Last: BIFIEsurvey 3.7-4
 --------------------------------------------------------------------------
  
-xxx   * ---
+NOTE  * check for ordered 'breaks' argument in BIFIE.ecdf()
 
 
 DATA  * ---

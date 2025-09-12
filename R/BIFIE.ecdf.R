@@ -1,9 +1,8 @@
 ## File Name: BIFIE.ecdf.R
-## File Version: 0.36
+## File Version: 0.376
 
 
-#######################################################################
-# empirical distribution function
+#--- empirical distribution function
 BIFIE.ecdf <- function( BIFIEobj, vars, breaks=NULL, quanttype=1,
     group=NULL, group_values=NULL  )
 {
@@ -12,7 +11,7 @@ BIFIE.ecdf <- function( BIFIEobj, vars, breaks=NULL, quanttype=1,
     cl <- match.call()
     bifieobj <- BIFIEobj
     if (bifieobj$cdata){
-        varnames <- unique( c( vars, group, "one") )
+        varnames <- unique( c( vars, group, 'one') )
         bifieobj <- BIFIE.BIFIEcdata2BIFIEdata( bifieobj, varnames=varnames )
     }
     FF <- Nimp <- bifieobj$Nimp
@@ -30,7 +29,7 @@ BIFIE.ecdf <- function( BIFIEobj, vars, breaks=NULL, quanttype=1,
     if ( ! se ){
         wgtrep <- matrix( wgt, ncol=1 )
         RR <- 0
-                }
+    }
 
     vars_index <- unlist( sapply( vars, FUN=function(vv){
                         which( varnames==vv ) }, simplify=FALSE) )
@@ -39,9 +38,9 @@ BIFIE.ecdf <- function( BIFIEobj, vars, breaks=NULL, quanttype=1,
 
     wgt_ <- matrix( wgt, ncol=1 )
     if ( is.null( group) ){ nogroup <- TRUE } else { nogroup <- FALSE }
-    cat(paste0( "|", paste0( rep("*", FF), collapse=""), "|\n" ))
+    cat(paste0( '|', paste0( rep('*', FF), collapse=''), '|\n' ))
     if (nogroup){
-        group <- "one"
+        group <- 'one'
         group_values <- c(1)
     }
 
@@ -66,6 +65,7 @@ BIFIE.ecdf <- function( BIFIEobj, vars, breaks=NULL, quanttype=1,
     if ( is.null(breaks) ){
         breaks <- as.numeric(seq( 0, 1, .01 ))
     }
+    breaks <- sort(unique(breaks))
 
     maxval <- round( max( dat1[, vars_index ], na.rm=TRUE ) * 100 )
 
@@ -91,20 +91,20 @@ BIFIE.ecdf <- function( BIFIEobj, vars, breaks=NULL, quanttype=1,
     s2 <- Sys.time()
     timediff <- c( s1, s2 )
     res1 <- list( ecdf=ecdf_, stat=stat, output=res, timediff=timediff,
-            N=N, Nimp=Nimp, RR=RR, fayfac=fayfac,
-            NMI=BIFIEobj$NMI, Nimp_NMI=BIFIEobj$Nimp_NMI,
-            CALL=cl )
-    class(res1) <- "BIFIE.ecdf"
+                        N=N, Nimp=Nimp, RR=RR, fayfac=fayfac,
+                        NMI=BIFIEobj$NMI, Nimp_NMI=BIFIEobj$Nimp_NMI,
+                        CALL=cl )
+    class(res1) <- 'BIFIE.ecdf'
     return(res1)
 }
-###################################################################################
 
-####################################################################################
+
+
 # summary for BIFIE.ecdf function
 summary.BIFIE.ecdf <- function( object, digits=4, ... )
 {
     BIFIE.summary(object)
-    cat("Empirical Distribution Function \n")
+    cat('Empirical Distribution Function \n')
     obji <- object$ecdf
     print_object_summary( obji, digits=digits )
 }
