@@ -12,6 +12,7 @@
 using namespace Rcpp;
 using namespace arma;
 
+#include "bifiesurvey_rcpp_helper.h"
 
 
 //*************************************************************************
@@ -39,7 +40,7 @@ Rcpp::NumericMatrix bifiesurvey_rcpp_jackknife_timss( Rcpp::NumericVector wgt,
             }
         }
         if (prbar[rr] == 1){
-            Rcpp::Rcout << "-" <<  std::flush;
+            if (!bifiesurvey_quiet()) { Rcpp::Rcout << "-" <<  std::flush; }
         }
     }
     return wgtrep;

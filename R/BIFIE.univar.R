@@ -36,7 +36,7 @@ BIFIE.univar <- function( BIFIEobj, vars, group=NULL, group_values=NULL, se=TRUE
             nogroup <- FALSE
     }
 
-    cat(paste0( "|", paste0( rep("*", FF), collapse=""), "|\n" ))
+    prepareConsoleProgressBar(FF)
     if (nogroup){
         group <- "one"
         group_values <- c(1)

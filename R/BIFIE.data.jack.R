@@ -112,8 +112,10 @@ BIFIE.data.jack <- function( data, wgt=NULL, jktype="JK_TIMSS", pv_vars=NULL,
         RR <- max( data[,jkzone] )
         prblen <- 10
         prbar <- BIFIE.progressbar( ops=RR, prblen=prblen )
-        cat("+++ Generate replicate weights\n")
-        cat(paste0("|", paste0(rep("*",prblen), collapse=""), "|\n|"))
+        if (!getOption("BIFIEsurvey.quiet", default = FALSE)) {
+          cat("+++ Generate replicate weights\n")
+          cat(paste0("|", paste0(rep("*",prblen), collapse=""), "|\n|"))
+        }
         utils::flush.console()
         addname <- 10^( floor( log( RR+.5, 10 ) )  + 1 )
         data[, jkzone ] <- match( data[, jkzone ], unique( data[, jkzone] ) )
@@ -134,7 +136,9 @@ BIFIE.data.jack <- function( data, wgt=NULL, jktype="JK_TIMSS", pv_vars=NULL,
             RR <- 2*RR
             fayfac <- .5
         }
-        cat("|\n")
+        if (!getOption("BIFIEsurvey.quiet", default = FALSE)) {
+          cat("|\n")
+        }
     }
 
     #******** generate replicated datasets for datasets

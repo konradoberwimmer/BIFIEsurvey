@@ -307,7 +307,7 @@ Rcpp::List bifiesurvey_rcpp_pathmodel( Rcpp::NumericMatrix datalist, Rcpp::Numer
     Rcpp::NumericMatrix sumwgt( GG, 1 );
     Rcpp::NumericMatrix parsrepM( NP*GG, Nimp*RR );
     Rcpp::NumericMatrix parsVar( NP*GG, Nimp);
-    Rcpp::Rcout << "|";
+    if (!bifiesurvey_quiet()) { Rcpp::Rcout << "|"; }
 
     // loop imputed datasets
     for (int ii=0;ii<Nimp;ii++){
@@ -343,13 +343,13 @@ Rcpp::List bifiesurvey_rcpp_pathmodel( Rcpp::NumericMatrix datalist, Rcpp::Numer
             parsVar( pp, ii ) = pars_var[ pp ];
         }
         
-        Rcpp::Rcout << "-" <<  std::flush;
+        if (!bifiesurvey_quiet()) { Rcpp::Rcout << "-" <<  std::flush; }
         Rcpp::checkUserInterrupt();
     } // end ii (imputations)
 
     //*** Rubin inference
     Rcpp::List parsL = rubin_rules_univ( parsM, parsVar );
-    Rcpp::Rcout << "|" << std::endl;
+    if (!bifiesurvey_quiet()) { Rcpp::Rcout << "|" << std::endl; }
 
     //***** OUTPUT
     return Rcpp::List::create(
