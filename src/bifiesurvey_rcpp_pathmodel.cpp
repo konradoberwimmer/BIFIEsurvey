@@ -262,6 +262,11 @@ Rcpp::List bifie_rcpp_pathmodel_compute( Rcpp::NumericMatrix dat1,
                 parsM( rr + 2*NP0 + gg*NP, ww ) = rsquared[rr];
                 parsM( rr + NR + 2*NP0 + gg*NP, ww ) = residvar[rr];
             }
+            
+            // check user interrupt every tenth weight
+            if (ww % 10 == 9) {
+              Rcpp::checkUserInterrupt();
+            }
         } // end ww
     }  // end gg
 
@@ -337,7 +342,9 @@ Rcpp::List bifiesurvey_rcpp_pathmodel( Rcpp::NumericMatrix datalist, Rcpp::Numer
         for (int pp=0;pp<NP1;pp++){
             parsVar( pp, ii ) = pars_var[ pp ];
         }
+        
         Rcpp::Rcout << "-" <<  std::flush;
+        Rcpp::checkUserInterrupt();
     } // end ii (imputations)
 
     //*** Rubin inference

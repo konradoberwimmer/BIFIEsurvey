@@ -108,8 +108,9 @@ Rcpp::List univar_multiple_V2group( Rcpp::NumericMatrix datalist, Rcpp::NumericM
                          ncasesM(gg+vv*GG,ii) = ncases1[gg+vv*GG];
                                  }
                                    }
+            
            Rcpp::Rcout << "-" <<  std::flush;
-            // << std::endl;
+           Rcpp::checkUserInterrupt();
          } // end loop ii | imputed datasets
 
         Rcpp::Rcout << "|" << std::endl;
@@ -247,6 +248,7 @@ Rcpp::List bifie_freq( Rcpp::NumericMatrix datalist, Rcpp::NumericMatrix wgt1,
      }
 
      Rcpp::Rcout << "-" <<  std::flush;
+     Rcpp::checkUserInterrupt();
 
      } // end ii
 
@@ -386,7 +388,7 @@ Rcpp::List bifie_correl( Rcpp::NumericMatrix datalist, Rcpp::NumericMatrix wgt1,
                   }
 
      Rcpp::Rcout << "-" <<  std::flush;
-
+     Rcpp::checkUserInterrupt();
           }  // end ii;  end multiple imputations
 
      Rcpp::Rcout << "|" << std::endl;
@@ -751,6 +753,7 @@ Rcpp::List bifie_test_univar( Rcpp::NumericMatrix mean1M, Rcpp::NumericMatrix sd
 
              } // end vv
      Rcpp::Rcout << "-" <<  std::flush;
+     Rcpp::checkUserInterrupt();
 
           }  // end ii;  end multiple imputations
 
@@ -858,6 +861,7 @@ Rcpp::List bifie_crosstab( Rcpp::NumericMatrix datalist, Rcpp::NumericMatrix wgt
                      }
 
          Rcpp::Rcout << "-" <<  std::flush;
+         Rcpp::checkUserInterrupt();
              }
 
      Rcpp::Rcout << "|" << std::endl;
@@ -980,8 +984,9 @@ Rcpp::List bifie_by( Rcpp::NumericMatrix datalist, Rcpp::NumericMatrix wgt1,
          // compute standard errors
          pars1_var = varjack_helper( pars1, pars1rep, fayfac );
          pars_varM(_,ii) = pars1_var;
-     Rcpp::Rcout << "-" <<  std::flush;
-
+         
+         Rcpp::Rcout << "-" <<  std::flush;
+         Rcpp::checkUserInterrupt();
           }  // end ii;  end multiple imputations
 
      Rcpp::Rcout << "|" << std::endl;
@@ -1067,6 +1072,7 @@ Rcpp::List bifie_hist( Rcpp::NumericMatrix datalist, Rcpp::NumericMatrix wgt1,
                      }
 
      Rcpp::Rcout << "-" <<  std::flush;
+     Rcpp::checkUserInterrupt();
 
      } // end ii
 
@@ -1153,6 +1159,7 @@ Rcpp::List bifie_ecdf( Rcpp::NumericMatrix datalist, Rcpp::NumericMatrix wgt1,
              ecdfM(zz,ii) = ecdfMtemp[zz];
                      }
      // Rcpp::Rcout << "ii= " <<  ii <<  std::flush << std::endl;
+     Rcpp::checkUserInterrupt();
          } // end dataset ii
 
      //********************************

@@ -229,6 +229,11 @@ Rcpp::List bifiesurvey_rcpp_logistreg( Rcpp::NumericMatrix datalist, Rcpp::Numer
                     // tempcoefrepM(vv+gg*VV,rr) = tempcoef2[vv];
                     tempcoefrepM(vv+gg*(VV+1),rr) = tempcoef2[vv];
                 }
+                
+                // check user interrupt every tenth weight
+                if (rr % 10 == 9) {
+                  Rcpp::checkUserInterrupt();
+                }
             } // end rr
         } //----- end gg
 
@@ -246,7 +251,9 @@ Rcpp::List bifiesurvey_rcpp_logistreg( Rcpp::NumericMatrix datalist, Rcpp::Numer
                 regrcoefrepM(zz, ww + ii*WW ) = tempcoefrepM(zz,ww);
             }
         }
+        
         Rcpp::Rcout << "-" <<  std::flush;
+        Rcpp::checkUserInterrupt();
     }  // end ii;  end multiple imputations
 
     Rcpp::Rcout << "|" << std::endl;

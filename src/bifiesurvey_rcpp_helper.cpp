@@ -439,6 +439,11 @@ Rcpp::List bifiehelpers_correl( Rcpp::NumericMatrix dat1, Rcpp::NumericVector in
                   dat1( nn, vars_index[vv2] );
                  }
                 } // end zz (item pairs)
+        
+        // check user interrupt every tenth weight
+        if (ww % 10 == 9) {
+          Rcpp::checkUserInterrupt();
+        }
                  } // end ww
         break;
                 } // end group == group_values[gg]
@@ -2127,8 +2132,8 @@ Rcpp::List bifie_mla2_estimation_replicates( int N__, int NC__,
     if ( zz == 9 ){
         zz = 0;
         Rcpp::Rcout << "-" <<    std::flush;
-        // Rcpp::Rcout << "-" <<  std::flush;
-            }
+        Rcpp::checkUserInterrupt();
+    }
 
 
 
