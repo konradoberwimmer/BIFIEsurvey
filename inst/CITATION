@@ -1,6 +1,6 @@
 citHeader("To cite the 'BIFIEsurvey' package in publications use:")
 
-year <- sub(".*(2[[:digit:]]{3})-.*", "\\1", meta$Date, perl = TRUE)
+year <- meta$`Config/Year`
 vers <- paste("R package version", meta$Version)
 
 bibentry(bibtype="Manual",
