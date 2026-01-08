@@ -130,9 +130,9 @@ summary(res1)
 #> BIFIEsurvey::BIFIE.logistreg(BIFIEobj = bdat, dep = "migrant", 
 #>     pre = c("one", "books", "lang"), group = "female", se = FALSE)
 #> 
-#> Date of Analysis: 2026-01-08 12:24:49.440455 
-#> Time difference of 0.0115509 secs
-#> Computation time: 0.0115509 
+#> Date of Analysis: 2026-01-08 12:35:53.474305 
+#> Time difference of 0.01150632 secs
+#> Computation time: 0.01150632 
 #> 
 #> Multiply imputed dataset
 #> 

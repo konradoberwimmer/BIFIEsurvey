@@ -116,9 +116,9 @@ summary(res1)
 #> Call:
 #> BIFIEsurvey::BIFIE.ecdf(BIFIEobj = bifieobj, vars = vars, group = group)
 #> 
-#> Date of Analysis: 2026-01-08 12:24:47.321238 
-#> Time difference of 0.01296115 secs
-#> Computation time: 0.01296115 
+#> Date of Analysis: 2026-01-08 12:35:51.295061 
+#> Time difference of 0.01174402 secs
+#> Computation time: 0.01174402 
 #> 
 #> Multiply imputed dataset
 #> 

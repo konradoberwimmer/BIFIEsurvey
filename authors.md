@@ -11,7 +11,7 @@
 ## Citation
 
 Source:
-[`inst/CITATION`](https://github.com/konradoberwimmer/BIFIEsurvey/blob/master/inst/CITATION)
+[`inst/CITATION`](https://github.com/konradoberwimmer/BIFIEsurvey/blob/v3.8.0/inst/CITATION)
 
 BIFIE, Robitzsch, A., & Oberwimmer, K. (2026). BIFIEsurvey: Tools for
 survey statistics in educational assessment. R package version 3.8.0.
