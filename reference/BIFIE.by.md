@@ -129,9 +129,9 @@ summary(res1)
 #>     "migrant", "books"), userfct = userfct, userparnames = c("MW_MAT", 
 #>     "MW_Migr"), group = "female")
 #> 
-#> Date of Analysis: 2026-01-08 12:35:27.52978 
-#> Time difference of 0.272506 secs
-#> Computation time: 0.272506 
+#> Date of Analysis: 2026-01-08 12:40:49.114721 
+#> Time difference of 0.2762234 secs
+#> Computation time: 0.2762234 
 #> 
 #> Multiply imputed dataset
 #> 
@@ -169,9 +169,9 @@ summary(res1b)
 #>     "migrant", "books"), userfct = userfct, userparnames = c("MW_MAT", 
 #>     "MW_Migr"), group = "female", use_Rcpp = FALSE)
 #> 
-#> Date of Analysis: 2026-01-08 12:35:27.808019 
-#> Time difference of 0.2341361 secs
-#> Computation time: 0.2341361 
+#> Date of Analysis: 2026-01-08 12:40:49.396672 
+#> Time difference of 0.2352815 secs
+#> Computation time: 0.2352815 
 #> 
 #> Multiply imputed dataset
 #> 
@@ -209,9 +209,9 @@ summary(res1d)
 #> Call:
 #> BIFIEsurvey::BIFIE.derivedParameters(BIFIE.method = res1, derived.parameters = derived.parameters)
 #> 
-#> Date of Analysis: 2026-01-08 12:35:28.047379 
-#> Time difference of 0.002600908 secs
-#> Computation time: 0.002600908 
+#> Date of Analysis: 2026-01-08 12:40:49.637257 
+#> Time difference of 0.002600193 secs
+#> Computation time: 0.002600193 
 #> 
 #> Multiply imputed dataset
 #> 
