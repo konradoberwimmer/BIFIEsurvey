@@ -12,7 +12,7 @@ all necessary information on the used librarys, the R version, and the OS it is 
 
 The manual may be found here [https://konradoberwimmer.github.io/BIFIEsurvey/](https://konradoberwimmer.github.io/BIFIEsurvey/) 
 
-#### CRAN version `BIFIEsurvey` 3.8.0
+#### CRAN version `BIFIEsurvey` 3.6-6 (2024-04-25)
 
 
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version-last-release/BIFIEsurvey)](https://cran.r-project.org/package=BIFIEsurvey)
@@ -26,7 +26,7 @@ The CRAN version can be installed from within R using:
 utils::install.packages("BIFIEsurvey")
 ```
 
-#### GitHub version `BIFIEsurvey` 3.8.0
+#### GitHub version `BIFIEsurvey` 3.8.0 (2026-01-08)
 
 [![GitHub_Status_Badge](https://img.shields.io/badge/github%20version-3.8.0-orange.svg)](https://github.com/konradoberwimmer/BIFIEsurvey)&#160;&#160;
 
