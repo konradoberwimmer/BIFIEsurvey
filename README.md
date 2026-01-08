@@ -28,7 +28,7 @@ utils::install.packages("BIFIEsurvey")
 
 #### GitHub version `BIFIEsurvey` 3.8.0
 
-[![](https://img.shields.io/badge/github%20version-3.8.0-orange.svg)](https://github.com/konradoberwimmer/BIFIEsurvey)&#160;&#160;
+[![GitHub_Status_Badge](https://img.shields.io/badge/github%20version-3.8.0-orange.svg)](https://github.com/konradoberwimmer/BIFIEsurvey)&#160;&#160;
 
 The version hosted [here](https://github.com/konradoberwimmer/BIFIEsurvey) is the development version of `BIFIEsurvey`. 
 The GitHub version can be installed using `devtools` as:
@@ -36,3 +36,11 @@ The GitHub version can be installed using `devtools` as:
 ```r
 devtools::install_github("konradoberwimmer/BIFIEsurvey")
 ```
+
+#### Former versions
+
+Former versions can be downloaded [here](https://stat.ethz.ch/CRAN/contrib/main/Archive/BIFIEsurvey/).
+
+#### Acknowledgement
+
+Up to 2025 this software package was maintained by its originator [Alexander Robitzsch](https://github.com/alexanderrobitzsch). He contributes almost all of the source code.
