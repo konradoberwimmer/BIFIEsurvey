@@ -2,7 +2,7 @@
 #### Tools for Survey Statistics in Educational Assessment
 
 
-If you use `BIFIEsurvey` and have suggestions for improvement or have found bugs, please email me at robitzsch@leibniz-ipn.de.
+If you use `BIFIEsurvey` and have suggestions for improvement or have found bugs, please email me at konrad.oberwimmer@iqs.gv.at.
 Please always provide a minimal dataset, necessary to demonstrate the problem, 
 a minimal runnable code necessary to reproduce the issue, which can be run on the given dataset, and
 all necessary information on the used librarys, the R version, and the OS it is run on, perhaps a sessionInfo().
@@ -10,9 +10,9 @@ all necessary information on the used librarys, the R version, and the OS it is 
 
 #### Manual
 
-The manual may be found here [https://alexanderrobitzsch.github.io/BIFIEsurvey/](https://alexanderrobitzsch.github.io/BIFIEsurvey/) 
+The manual may be found here [https://konradoberwimmer.github.io/BIFIEsurvey/](https://konradoberwimmer.github.io/BIFIEsurvey/) 
 
-#### CRAN version `BIFIEsurvey` 3.6-6 (2024-04-25)
+#### CRAN version `BIFIEsurvey` 3.8.0
 
 
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version-last-release/BIFIEsurvey)](https://cran.r-project.org/package=BIFIEsurvey)
@@ -26,13 +26,21 @@ The CRAN version can be installed from within R using:
 utils::install.packages("BIFIEsurvey")
 ```
 
-#### GitHub version `BIFIEsurvey` 3.7-4 (2025-09-12)
+#### GitHub version `BIFIEsurvey` 3.8.0
 
-[![](https://img.shields.io/badge/github%20version-3.7--4-orange.svg)](https://github.com/alexanderrobitzsch/BIFIEsurvey)&#160;&#160;
+[![GitHub_Status_Badge](https://img.shields.io/badge/github%20version-3.8.0-orange.svg)](https://github.com/konradoberwimmer/BIFIEsurvey)&#160;&#160;
 
-The version hosted [here](https://github.com/alexanderrobitzsch/BIFIEsurvey) is the development version of `BIFIEsurvey`. 
+The version hosted [here](https://github.com/konradoberwimmer/BIFIEsurvey) is the development version of `BIFIEsurvey`. 
 The GitHub version can be installed using `devtools` as:
 
 ```r
-devtools::install_github("alexanderrobitzsch/BIFIEsurvey")
+devtools::install_github("konradoberwimmer/BIFIEsurvey")
 ```
+
+#### Former versions
+
+Former versions can be downloaded [here](https://stat.ethz.ch/CRAN/contrib/main/Archive/BIFIEsurvey/).
+
+#### Acknowledgement
+
+Up to 2025 this software package was maintained by its originator [Alexander Robitzsch](https://github.com/alexanderrobitzsch). He contributes almost all of the source code.

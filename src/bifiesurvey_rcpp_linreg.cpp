@@ -152,6 +152,11 @@ Rcpp::List bifiesurvey_rcpp_linreg_compute( Rcpp::NumericMatrix dat1,
                 SD_pre(vv,ww) = std::sqrt( SD_pre(vv,ww) / ( sggww - 1 ) );
                 regr_coef( VV+2+vv + gg*(2*VV+2), ww ) = coef(vv,0) / SD_dep(0,ww) * SD_pre(vv,ww);
             }
+            
+            // check user interrupt every tenth weight
+            if (ww % 10 == 9) {
+              Rcpp::checkUserInterrupt();
+            }
         } // end ww
     } // end gg
 
@@ -185,7 +190,7 @@ Rcpp::List bifiesurvey_rcpp_linreg( Rcpp::NumericMatrix datalist, Rcpp::NumericM
     Rcpp::NumericMatrix regrcoef_varM(VV2,Nimp);
     int WW = wgtrep.ncol();
     Rcpp::NumericMatrix regrcoefrepM(VV2,Nimp*WW);
-    Rcpp::Rcout << "|";
+    if (!bifiesurvey_quiet()) { Rcpp::Rcout << "|"; }
 
     //****** loop over imputations
     for (int ii = 0; ii < Nimp; ii++){
@@ -220,9 +225,10 @@ Rcpp::List bifiesurvey_rcpp_linreg( Rcpp::NumericMatrix datalist, Rcpp::NumericM
                 regrcoefrepM(zz, ww + ii*WW ) = regrcoefrep(zz,ww);
             }
         }
-    Rcpp::Rcout << "-" <<  std::flush;
+    if (!bifiesurvey_quiet()) { Rcpp::Rcout << "-" <<  std::flush; }
+        Rcpp::checkUserInterrupt();
     }  // end ii;  end multiple imputations
-    Rcpp::Rcout << "|" << std::endl;
+    if (!bifiesurvey_quiet()) { Rcpp::Rcout << "|" << std::endl; }
 
     //*** Rubin inference
     Rcpp::List regrcoefL = rubin_rules_univ( regrcoefM, regrcoef_varM );

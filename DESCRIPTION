@@ -1,18 +1,18 @@
 Package: BIFIEsurvey
 Type: Package
 Title: Tools for Survey Statistics in Educational Assessment
-Version: 3.7-4
-Date: 2025-09-12 12:07:19
+Version: 3.8.0
+Config/Year: 2026
 Authors@R: c(person(family = "BIFIE",
                         role = "aut"),
                  person(given = "Alexander",
                         family = "Robitzsch",
-                        role = c("aut", "cre"),
-                        email = "robitzsch@ipn.uni-kiel.de"),
+                        role = "aut"),
                  person(given = "Konrad",
                         family = "Oberwimmer",
-                        role = "aut"))
-Maintainer: Alexander Robitzsch <robitzsch@ipn.uni-kiel.de>
+                        role = c("aut", "cre"),
+                        email = "konrad.oberwimmer@iqs.gv.at"))
+Maintainer: Konrad Oberwimmer <konrad.oberwimmer@iqs.gv.at>
 Description:
     Contains tools for survey statistics (especially in educational
     assessment) for datasets with replication designs (jackknife, 
@@ -42,6 +42,4 @@ Enhances:
 LinkingTo: 
     Rcpp, RcppArmadillo    
 License: GPL (>= 2)
-URL:
-    https://github.com/alexanderrobitzsch/BIFIEsurvey,
-    https://sites.google.com/view/alexander-robitzsch/software
+URL:https://github.com/konradoberwimmer/BIFIEsurvey, https://konradoberwimmer.github.io/BIFIEsurvey/

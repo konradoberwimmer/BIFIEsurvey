@@ -238,7 +238,7 @@ dat1 <- data.frame("idcluster"=idcluster )
 dat1$X <- rep( stats::rnorm( NC, sd=sqrt(iccx) ), each=Nj ) +
                  stats::rnorm( N, sd=sqrt( 1 - iccx) )
 dat1$Y <- theta[1] + rep( stats::rnorm(NC, sd=sqrt(Tmat[1,1] ) ), each=Nj ) +
-      theta[2] + rep( stats::rnorm(NC, sd=sqrt(Tmat[2,2])), each=Nj )) * dat1$X +
+      theta[2] + rep( stats::rnorm(NC, sd=sqrt(Tmat[2,2])), each=Nj ) * dat1$X +
       stats::rnorm(N, sd=sqrt(sig2) )
 
 #--- (2) create design object

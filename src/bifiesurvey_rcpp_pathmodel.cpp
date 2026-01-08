@@ -262,6 +262,11 @@ Rcpp::List bifie_rcpp_pathmodel_compute( Rcpp::NumericMatrix dat1,
                 parsM( rr + 2*NP0 + gg*NP, ww ) = rsquared[rr];
                 parsM( rr + NR + 2*NP0 + gg*NP, ww ) = residvar[rr];
             }
+            
+            // check user interrupt every tenth weight
+            if (ww % 10 == 9) {
+              Rcpp::checkUserInterrupt();
+            }
         } // end ww
     }  // end gg
 
@@ -302,7 +307,7 @@ Rcpp::List bifiesurvey_rcpp_pathmodel( Rcpp::NumericMatrix datalist, Rcpp::Numer
     Rcpp::NumericMatrix sumwgt( GG, 1 );
     Rcpp::NumericMatrix parsrepM( NP*GG, Nimp*RR );
     Rcpp::NumericMatrix parsVar( NP*GG, Nimp);
-    Rcpp::Rcout << "|";
+    if (!bifiesurvey_quiet()) { Rcpp::Rcout << "|"; }
 
     // loop imputed datasets
     for (int ii=0;ii<Nimp;ii++){
@@ -337,12 +342,14 @@ Rcpp::List bifiesurvey_rcpp_pathmodel( Rcpp::NumericMatrix datalist, Rcpp::Numer
         for (int pp=0;pp<NP1;pp++){
             parsVar( pp, ii ) = pars_var[ pp ];
         }
-        Rcpp::Rcout << "-" <<  std::flush;
+        
+        if (!bifiesurvey_quiet()) { Rcpp::Rcout << "-" <<  std::flush; }
+        Rcpp::checkUserInterrupt();
     } // end ii (imputations)
 
     //*** Rubin inference
     Rcpp::List parsL = rubin_rules_univ( parsM, parsVar );
-    Rcpp::Rcout << "|" << std::endl;
+    if (!bifiesurvey_quiet()) { Rcpp::Rcout << "|" << std::endl; }
 
     //***** OUTPUT
     return Rcpp::List::create(

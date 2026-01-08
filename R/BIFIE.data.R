@@ -54,8 +54,10 @@ BIFIE.data <- function( data.list, wgt=NULL, wgtrep=NULL, fayfac=1,
     p1 <- sapply( 1:V, FUN=function(vv){ is.numeric( dat1[,vv] ) } )
     notnum <- which( ! p1 )
     datalistM <- matrix( NA, nrow=N*Nimp, V + 1)
-    cat("+++ Generate BIFIE.data object\n")
-    cat(paste0( "|", paste0( rep("*", FF), collapse=""), "|\n|" ))
+    if (!getOption("BIFIEsurvey.quiet", default = FALSE)) {
+      cat("+++ Generate BIFIE.data object\n")
+      cat(paste0( "|", paste0( rep("*", FF), collapse=""), "|\n|" ))
+    }
     #****
     # weights
     if ( is.character(wgt) & ( length(wgt)==1 ) ){
@@ -74,9 +76,13 @@ BIFIE.data <- function( data.list, wgt=NULL, wgtrep=NULL, fayfac=1,
         dat1$one <- 1
         dat1 <- as.matrix( dat1)
         datalistM[ 1:N + N*(ff-1), ] <- dat1
-        cat("-") ; flush.console()
+        if (!getOption("BIFIEsurvey.quiet", default = FALSE)) {
+          cat("-") ; flush.console()
+        }
     }
-    cat("|\n")
+    if (!getOption("BIFIEsurvey.quiet", default = FALSE)) {
+      cat("|\n")
+    }
     wgtrep <- as.matrix(wgtrep)
     res <- list( "datalistM"=datalistM, "wgt"=wgt, "wgtrep"=wgtrep,
         "Nimp"=Nimp, "N"=N, "dat1"=dat1, "varnames"=cn, "fayfac"=fayfac,

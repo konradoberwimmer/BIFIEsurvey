@@ -8,6 +8,8 @@
 using namespace Rcpp;
 using namespace arma;
 
+bool bifiesurvey_quiet();
+
 double bifiesurvey_rcpp_squeeze( double x, double min_val, double max_val );
 
 double bifiesurvey_rcpp_arma_trace( arma::mat x );

@@ -15,6 +15,16 @@ using namespace Rcpp;
 using namespace arma;
 
 
+bool bifiesurvey_quiet() 
+{
+  Rcpp::Environment base("package:base");
+  Rcpp::Function get_option = base["getOption"];
+  
+  Rcpp::LogicalVector quiet = get_option("BIFIEsurvey.quiet", Named("default", false));
+  
+  return Rf_asBool(quiet);
+}
+
 // Rcpp::Rcout << "sigma_XX(0,0)= " <<  sigma_XX(0,0) << " " <<
 //    "(1,1) " <<  sigma_XX(1,1)     <<  std::flush << std::endl;
 
@@ -439,6 +449,11 @@ Rcpp::List bifiehelpers_correl( Rcpp::NumericMatrix dat1, Rcpp::NumericVector in
                   dat1( nn, vars_index[vv2] );
                  }
                 } // end zz (item pairs)
+        
+        // check user interrupt every tenth weight
+        if (ww % 10 == 9) {
+          Rcpp::checkUserInterrupt();
+        }
                  } // end ww
         break;
                 } // end group == group_values[gg]
@@ -1667,7 +1682,7 @@ Rcpp::List mla2_emsteps( Rcpp::NumericMatrix X, Rcpp::NumericMatrix Z,
             Eterm3 += wgtlev1[nn] * rj * rj;
                     }
 
-    // Rcpp::Rcout << "|" << std::endl;
+    // if (!bifiesurvey_quiet()) { Rcpp::Rcout << "|" << std::endl; }
 
         }  // end jj
     //----
@@ -2126,9 +2141,9 @@ Rcpp::List bifie_mla2_estimation_replicates( int N__, int NC__,
     zz ++;
     if ( zz == 9 ){
         zz = 0;
-        Rcpp::Rcout << "-" <<    std::flush;
-        // Rcpp::Rcout << "-" <<  std::flush;
-            }
+        if (!bifiesurvey_quiet()) { Rcpp::Rcout << "-" <<    std::flush; }
+        Rcpp::checkUserInterrupt();
+    }
 
 
 

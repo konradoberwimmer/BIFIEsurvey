@@ -31,7 +31,9 @@ BIFIE.logistreg <- function( BIFIEobj, dep=NULL, pre=NULL,
 
     #*** look for formula objects
     if ( ! is.null( formula) ){
-        cat("|*** Data Preparation ")
+        if (!getOption("BIFIEsurvey.quiet", default = FALSE)) {
+          cat("|*** Data Preparation ")
+        }
         utils::flush.console()
         bifieobj2 <- datalistM
         colnames(bifieobj2) <- varnames
@@ -46,7 +48,9 @@ BIFIE.logistreg <- function( BIFIEobj, dep=NULL, pre=NULL,
         pre <- colnames( m1 )
         datalistM <- as.matrix( cbind( bifieobj2[, dep  ], m1, bifieobj2[,group] ) )
         varnames <- c( dep, pre, group )
-        cat("\n")
+        if (!getOption("BIFIEsurvey.quiet", default = FALSE)) {
+          cat("\n")
+        }
     }
     if (RR==1){ RR <- 0 }
     if ( ! se ){
@@ -62,7 +66,7 @@ BIFIE.logistreg <- function( BIFIEobj, dep=NULL, pre=NULL,
     VV <- length(pre)
     wgt_ <- matrix( wgt, ncol=1 )
     if ( is.null( group) ){ nogroup <- TRUE } else { nogroup <- FALSE }
-    cat(paste0( "|", paste0( rep("*", FF), collapse=""), "|\n" ))
+    prepareConsoleProgressBar(FF)
     if (nogroup){
         group <- "one"
         group_values <- c(1)

@@ -152,7 +152,7 @@ Rcpp::List bifiesurvey_rcpp_logistreg( Rcpp::NumericMatrix datalist, Rcpp::Numer
     Rcpp::NumericVector regrcoef0(VV2);
     Rcpp::NumericVector beta0(VV);
     Rcpp::NumericVector tempcoef(VV);
-    Rcpp::Rcout << "|";
+    if (!bifiesurvey_quiet()) { Rcpp::Rcout << "|"; }
 
     // loop over imputed datasets
     for ( int ii=0; ii < Nimp; ii++ ){
@@ -229,6 +229,11 @@ Rcpp::List bifiesurvey_rcpp_logistreg( Rcpp::NumericMatrix datalist, Rcpp::Numer
                     // tempcoefrepM(vv+gg*VV,rr) = tempcoef2[vv];
                     tempcoefrepM(vv+gg*(VV+1),rr) = tempcoef2[vv];
                 }
+                
+                // check user interrupt every tenth weight
+                if (rr % 10 == 9) {
+                  Rcpp::checkUserInterrupt();
+                }
             } // end rr
         } //----- end gg
 
@@ -246,10 +251,12 @@ Rcpp::List bifiesurvey_rcpp_logistreg( Rcpp::NumericMatrix datalist, Rcpp::Numer
                 regrcoefrepM(zz, ww + ii*WW ) = tempcoefrepM(zz,ww);
             }
         }
-        Rcpp::Rcout << "-" <<  std::flush;
+        
+        if (!bifiesurvey_quiet()) { Rcpp::Rcout << "-" <<  std::flush; }
+        Rcpp::checkUserInterrupt();
     }  // end ii;  end multiple imputations
 
-    Rcpp::Rcout << "|" << std::endl;
+    if (!bifiesurvey_quiet()) { Rcpp::Rcout << "|" << std::endl; }
     ///*** Rubin inference
     Rcpp::List regrcoefL = rubin_rules_univ( regrcoefM, regrcoef_varM );
 

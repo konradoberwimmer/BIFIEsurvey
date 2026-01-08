@@ -1,0 +1,8 @@
+^.*\.Rproj$
+^\.Rproj\.user$
+^.git
+^docs/
+^_pkgdown\.yml$
+^docs$
+^pkgdown$
+^\.github$

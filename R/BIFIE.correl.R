@@ -37,7 +37,7 @@ BIFIE.correl <- function( BIFIEobj, vars, group=NULL, group_values=NULL, se=TRUE
 
     wgt_ <- matrix( wgt, ncol=1 )
     if ( is.null( group) ){ nogroup <- TRUE } else { nogroup <- FALSE }
-    cat(paste0( "|", paste0( rep("*", FF), collapse=""), "|\n" ))
+    prepareConsoleProgressBar(FF)
     if (nogroup){
         group <- "one"
         group_values <- c(1)

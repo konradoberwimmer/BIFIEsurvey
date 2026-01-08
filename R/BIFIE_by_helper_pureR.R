@@ -19,13 +19,17 @@ BIFIE_by_helper_pureR <- function(
     ncasesM <- matrix( NA, nrow=G, ncol=Nimp )
 
 
-    cat("|")
+    if (!getOption("BIFIEsurvey.quiet", default = FALSE)) {
+      cat("|")
+    }
 s1 <- Sys.time()
 
     for (ii in 1:Nimp){
         # ii <- 1  # imputed dataset
 
-        cat("-"); utils::flush.console();
+        if (!getOption("BIFIEsurvey.quiet", default = FALSE)) {
+          cat("-"); utils::flush.console();
+        }
         dat.ii <- datalistM[ 1:N + (ii-1)*N, ]
 
         for (gg in 1:G){
@@ -44,7 +48,9 @@ s1 <- Sys.time()
             parsrepM[ 1:NP + (gg-1)*NP, 1:RR + (ii-1)*RR ] <- h1
         }
     }
-        cat("|\n"); utils::flush.console()
+    if (!getOption("BIFIEsurvey.quiet", default = FALSE)) {
+      cat("|\n"); utils::flush.console()
+    }
 
     # statistical inference
     res0 <- bifie_comp_vcov_within( parsM, parsrepM, fayfac,

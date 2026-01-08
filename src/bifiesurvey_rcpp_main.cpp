@@ -60,7 +60,7 @@ Rcpp::List univar_multiple_V2group( Rcpp::NumericMatrix datalist, Rcpp::NumericM
      Rcpp::NumericMatrix sd1rep(VV1,RR);
      Rcpp::NumericMatrix sumweightrepM(GG,RR*Nimp);
 
-     Rcpp::Rcout << "|";
+     if (!bifiesurvey_quiet()) { Rcpp::Rcout << "|"; }
 
      //***********************
      // loop multiply imputed datasets
@@ -108,11 +108,13 @@ Rcpp::List univar_multiple_V2group( Rcpp::NumericMatrix datalist, Rcpp::NumericM
                          ncasesM(gg+vv*GG,ii) = ncases1[gg+vv*GG];
                                  }
                                    }
-           Rcpp::Rcout << "-" <<  std::flush;
-            // << std::endl;
+            
+            if (!bifiesurvey_quiet()) { Rcpp::Rcout << "-" <<  std::flush; }
+            
+            Rcpp::checkUserInterrupt();
          } // end loop ii | imputed datasets
 
-        Rcpp::Rcout << "|" << std::endl;
+     if (!bifiesurvey_quiet()) { Rcpp::Rcout << "|" << std::endl; }
 
      //----
      // inference multiply imputed datasets
@@ -206,7 +208,7 @@ Rcpp::List bifie_freq( Rcpp::NumericMatrix datalist, Rcpp::NumericMatrix wgt1,
      Rcpp::NumericMatrix perc1repM(VV2,RR*Nimp);
      Rcpp::NumericMatrix perc2repM(VV2,RR*Nimp);
 
-     Rcpp::Rcout << "|";
+     if (!bifiesurvey_quiet()) { Rcpp::Rcout << "|"; }
 
      // loop over imputed datasets
      for (int ii = 0;ii<Nimp; ii++ ){
@@ -246,11 +248,12 @@ Rcpp::List bifie_freq( Rcpp::NumericMatrix datalist, Rcpp::NumericMatrix wgt1,
            }
      }
 
-     Rcpp::Rcout << "-" <<  std::flush;
+     if (!bifiesurvey_quiet()) { Rcpp::Rcout << "-" <<  std::flush; }
+     Rcpp::checkUserInterrupt();
 
      } // end ii
 
-     Rcpp::Rcout << "|" << std::endl;
+     if (!bifiesurvey_quiet()) { Rcpp::Rcout << "|" << std::endl; }
 
      ///*** Rubin inference
      Rcpp::List perc1L = rubin_rules_univ( perc1M, perc1_varM );
@@ -329,7 +332,7 @@ Rcpp::List bifie_correl( Rcpp::NumericMatrix datalist, Rcpp::NumericMatrix wgt1,
      Rcpp::NumericMatrix cor1M(VV2,Nimp);
      Rcpp::NumericMatrix cor1_varM(VV2,Nimp);
      Rcpp::NumericMatrix cor1repM(VV2,RR*Nimp);
-     Rcpp::Rcout << "|";
+     if (!bifiesurvey_quiet()) { Rcpp::Rcout << "|"; }
 
      ///***************** loop imputed datasets
 
@@ -385,11 +388,11 @@ Rcpp::List bifie_correl( Rcpp::NumericMatrix datalist, Rcpp::NumericMatrix wgt1,
           sumwgt1M(gg,ii) = sumwgt1[gg];
                   }
 
-     Rcpp::Rcout << "-" <<  std::flush;
-
+     if (!bifiesurvey_quiet()) { Rcpp::Rcout << "-" <<  std::flush; }
+     Rcpp::checkUserInterrupt();
           }  // end ii;  end multiple imputations
 
-     Rcpp::Rcout << "|" << std::endl;
+     if (!bifiesurvey_quiet()) { Rcpp::Rcout << "|" << std::endl; }
 
 
      ///*** Rubin inference
@@ -697,7 +700,7 @@ Rcpp::List bifie_test_univar( Rcpp::NumericMatrix mean1M, Rcpp::NumericMatrix sd
                 ii++;
                  }
              }
-     Rcpp::Rcout << "|";
+     if (!bifiesurvey_quiet()) { Rcpp::Rcout << "|"; }
 
      // loop over imputations
      for ( int ii=0; ii < Nimp; ii++){
@@ -750,11 +753,12 @@ Rcpp::List bifie_test_univar( Rcpp::NumericMatrix mean1M, Rcpp::NumericMatrix sd
 
 
              } // end vv
-     Rcpp::Rcout << "-" <<  std::flush;
+     if (!bifiesurvey_quiet()) { Rcpp::Rcout << "-" <<  std::flush; }
+     Rcpp::checkUserInterrupt();
 
           }  // end ii;  end multiple imputations
 
-     Rcpp::Rcout << "|" << std::endl;
+     if (!bifiesurvey_quiet()) { Rcpp::Rcout << "|" << std::endl; }
      //----------------------
 
      ///*** Rubin inference
@@ -822,7 +826,7 @@ Rcpp::List bifie_crosstab( Rcpp::NumericMatrix datalist, Rcpp::NumericMatrix wgt
      Rcpp::NumericMatrix ctpars_varM( CTP, Nimp);
      Rcpp::NumericMatrix ctparsrepM( CTP, Nimp*RR);
 
-     Rcpp::Rcout << "|";
+     if (!bifiesurvey_quiet()) { Rcpp::Rcout << "|"; }
 
      ///****** loop imputed datasets
 
@@ -857,10 +861,11 @@ Rcpp::List bifie_crosstab( Rcpp::NumericMatrix datalist, Rcpp::NumericMatrix wgt
              ctparsrepM(_,rr+ii*RR) = ctparsrep(_,rr);
                      }
 
-         Rcpp::Rcout << "-" <<  std::flush;
+         if (!bifiesurvey_quiet()) { Rcpp::Rcout << "-" <<  std::flush; }
+         Rcpp::checkUserInterrupt();
              }
 
-     Rcpp::Rcout << "|" << std::endl;
+     if (!bifiesurvey_quiet()) { Rcpp::Rcout << "|" << std::endl; }
 
      ///*** Rubin inference
      Rcpp::List ctparsL = rubin_rules_univ( ctparsM, ctpars_varM );
@@ -920,7 +925,7 @@ Rcpp::List bifie_by( Rcpp::NumericMatrix datalist, Rcpp::NumericMatrix wgt1,
      Rcpp::NumericMatrix pars1repM(NP*GG,WW*Nimp);
      Rcpp::NumericVector pars1_var(NP*GG);
 
-     Rcpp::Rcout << "|";
+     if (!bifiesurvey_quiet()) { Rcpp::Rcout << "|"; }
 
      // dataset ii
      for (ii=0;ii<Nimp;ii++){  // beg ii
@@ -980,11 +985,12 @@ Rcpp::List bifie_by( Rcpp::NumericMatrix datalist, Rcpp::NumericMatrix wgt1,
          // compute standard errors
          pars1_var = varjack_helper( pars1, pars1rep, fayfac );
          pars_varM(_,ii) = pars1_var;
-     Rcpp::Rcout << "-" <<  std::flush;
-
+         
+         if (!bifiesurvey_quiet()) { Rcpp::Rcout << "-" <<  std::flush; }
+         Rcpp::checkUserInterrupt();
           }  // end ii;  end multiple imputations
 
-     Rcpp::Rcout << "|" << std::endl;
+     if (!bifiesurvey_quiet()) { Rcpp::Rcout << "|" << std::endl; }
 
      ///*** Rubin inference
      Rcpp::List parsL = rubin_rules_univ( parsM, pars_varM );
@@ -1031,7 +1037,7 @@ Rcpp::List bifie_hist( Rcpp::NumericMatrix datalist, Rcpp::NumericMatrix wgt1,
 
      int bb=0;
 
-     Rcpp::Rcout << "|";
+     if (!bifiesurvey_quiet()) { Rcpp::Rcout << "|"; }
 
      for ( int ii=0; ii < Nimp; ii++ ){
 
@@ -1066,11 +1072,12 @@ Rcpp::List bifie_hist( Rcpp::NumericMatrix datalist, Rcpp::NumericMatrix wgt1,
          sumwgt_gg[hh] += sumwgt_ggM(hh,ii);
                      }
 
-     Rcpp::Rcout << "-" <<  std::flush;
+     if (!bifiesurvey_quiet()) { Rcpp::Rcout << "-" <<  std::flush; }
+     Rcpp::checkUserInterrupt();
 
      } // end ii
 
-     Rcpp::Rcout << "|" << std::endl;
+     if (!bifiesurvey_quiet()) { Rcpp::Rcout << "|" << std::endl; }
 
 
      //*********************************
@@ -1153,6 +1160,7 @@ Rcpp::List bifie_ecdf( Rcpp::NumericMatrix datalist, Rcpp::NumericMatrix wgt1,
              ecdfM(zz,ii) = ecdfMtemp[zz];
                      }
      // Rcpp::Rcout << "ii= " <<  ii <<  std::flush << std::endl;
+     Rcpp::checkUserInterrupt();
          } // end dataset ii
 
      //********************************
@@ -1452,10 +1460,12 @@ Rcpp::List bifie_mla2( Rcpp::NumericMatrix X_list, Rcpp::NumericMatrix Z_list,
      //-------------- DATASET ORIGINAL --------------------------
 
      // print progress
-     Rcpp::Rcout << " " << std::endl;
-     Rcpp::Rcout << "Imputation " <<  imp+1 <<
-        " | Group " << gg+1 <<   " |" << std::flush;
-
+     if (!bifiesurvey_quiet()) { 
+       Rcpp::Rcout << " " << std::endl;
+       Rcpp::Rcout << "Imputation " <<  imp+1 <<
+          " | Group " << gg+1 <<   " |" << std::flush;
+     }
+     
      //**********************************
      // rescaling weights
      Rcpp::NumericVector wgtlev1a = rescale_lev1weights( idcluster_table2,
@@ -1554,7 +1564,7 @@ Rcpp::List bifie_mla2( Rcpp::NumericMatrix X_list, Rcpp::NumericMatrix Z_list,
 
      ///*** Rubin inference
      Rcpp::List parsL = rubin_rules_univ( parsM, parsVar );
-     Rcpp::Rcout << " " << std::endl;
+     if (!bifiesurvey_quiet()) { Rcpp::Rcout << " " << std::endl; }
      //*************************************************
      // OUTPUT
      return Rcpp::List::create(
