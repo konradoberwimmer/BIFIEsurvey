@@ -1,0 +1,53 @@
+# BIFIEsurvey
+
+#### Tools for Survey Statistics in Educational Assessment
+
+If you use `BIFIEsurvey` and have suggestions for improvement or have
+found bugs, please email me at <konrad.oberwimmer@iqs.gv.at>. Please
+always provide a minimal dataset, necessary to demonstrate the problem,
+a minimal runnable code necessary to reproduce the issue, which can be
+run on the given dataset, and all necessary information on the used
+librarys, the R version, and the OS it is run on, perhaps a
+sessionInfo().
+
+#### Manual
+
+The manual may be found here
+<https://konradoberwimmer.github.io/BIFIEsurvey/>
+
+#### CRAN version `BIFIEsurvey` 3.8.0
+
+[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version-last-release/BIFIEsurvey)](https://cran.r-project.org/package=BIFIEsurvey)
+  
+
+The official version of `BIFIEsurvey` is hosted on CRAN and may be found
+[here](https://cran.r-project.org/package=BIFIEsurvey). The CRAN version
+can be installed from within R using:
+
+``` r
+utils::install.packages("BIFIEsurvey")
+```
+
+#### GitHub version `BIFIEsurvey` 3.8.0
+
+[![GitHub_Status_Badge](https://img.shields.io/badge/github%20version-3.8.0-orange.svg)](https://github.com/konradoberwimmer/BIFIEsurvey)  
+
+The version hosted
+[here](https://github.com/konradoberwimmer/BIFIEsurvey) is the
+development version of `BIFIEsurvey`. The GitHub version can be
+installed using `devtools` as:
+
+``` r
+devtools::install_github("konradoberwimmer/BIFIEsurvey")
+```
+
+#### Former versions
+
+Former versions can be downloaded
+[here](https://stat.ethz.ch/CRAN/contrib/main/Archive/BIFIEsurvey/).
+
+#### Acknowledgement
+
+Up to 2025 this software package was maintained by its originator
+[Alexander Robitzsch](https://github.com/alexanderrobitzsch). He
+contributes almost all of the source code.
