@@ -128,9 +128,9 @@ summary(res1)
 #> BIFIEsurvey::BIFIE.crosstab(BIFIEobj = bifieobj, vars1 = "migrant", 
 #>     vars2 = "books", group = "female")
 #> 
-#> Date of Analysis: 2026-01-08 12:41:05.59098 
-#> Time difference of 0.2451909 secs
-#> Computation time: 0.2451909 
+#> Date of Analysis: 2026-01-09 04:20:06.079531 
+#> Time difference of 0.248903 secs
+#> Computation time: 0.248903 
 #> 
 #> Multiply imputed dataset
 #> 

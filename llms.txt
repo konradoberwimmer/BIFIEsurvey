@@ -44,7 +44,7 @@ devtools::install_github("konradoberwimmer/BIFIEsurvey")
 #### Former versions
 
 Former versions can be downloaded
-[here](https://stat.ethz.ch/CRAN/contrib/main/Archive/BIFIEsurvey/).
+[here](https://CRAN.R-project.org/src/contrib/Archive/BIFIEsurvey/).
 
 #### Acknowledgement
 

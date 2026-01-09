@@ -126,9 +126,9 @@ summary(mod1)
 #> BIFIEsurvey::BIFIE.linreg(BIFIEobj = bdat, dep = "ASMMAT", pre = c("one", 
 #>     "books", "migrant"), group = "female")
 #> 
-#> Date of Analysis: 2026-01-08 12:41:12.510133 
-#> Time difference of 0.1273777 secs
-#> Computation time: 0.1273777 
+#> Date of Analysis: 2026-01-09 04:20:12.73961 
+#> Time difference of 0.1279342 secs
+#> Computation time: 0.1279342 
 #> 
 #> Multiply imputed dataset
 #> 

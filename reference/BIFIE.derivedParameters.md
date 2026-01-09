@@ -138,9 +138,9 @@ summary(res1)
 #> BIFIEsurvey::BIFIE.correl(BIFIEobj = bdat, vars = c("ASSSCI", 
 #>     "ASMMAT", "books", "migrant"))
 #> 
-#> Date of Analysis: 2026-01-08 12:41:10.078174 
-#> Time difference of 0.2889383 secs
-#> Computation time: 0.2889383 
+#> Date of Analysis: 2026-01-09 04:20:10.082299 
+#> Time difference of 0.2881606 secs
+#> Computation time: 0.2881606 
 #> 
 #> Multiply imputed dataset
 #> 
@@ -206,9 +206,9 @@ summary(res2)
 #> Call:
 #> BIFIEsurvey::BIFIE.derivedParameters(BIFIE.method = res1, derived.parameters = derived.parameters)
 #> 
-#> Date of Analysis: 2026-01-08 12:41:10.393655 
-#> Time difference of 0.0234077 secs
-#> Computation time: 0.0234077 
+#> Date of Analysis: 2026-01-09 04:20:10.397585 
+#> Time difference of 0.03844905 secs
+#> Computation time: 0.03844905 
 #> 
 #> Multiply imputed dataset
 #> 

@@ -178,7 +178,7 @@ summary(bdat)
 #>  BIFIEsurvey::BIFIE.data(data.list = data.timss1, wgt = data.timss1[[1]]$TOTWGT, 
 #>     wgtrep = data.timssrep[, -1])
 #> 
-#> Date of Analysis: 2026-01-08 12:41:06.044762 
+#> Date of Analysis: 2026-01-09 04:20:06.538758 
 #> 
 #> Multiply imputed dataset
 #> 
@@ -211,7 +211,7 @@ summary(bdat2)
 #>     wgtrep = data.timssrep[, -1], cdata = TRUE)
 #> Compact BIFIEdata
 #> 
-#> Date of Analysis: 2026-01-08 12:41:06.055185 
+#> Date of Analysis: 2026-01-09 04:20:06.549901 
 #> 
 #> Multiply imputed dataset
 #> 
@@ -262,7 +262,7 @@ summary(bdat1)
 #>  BIFIEsurvey::BIFIE.data(data.list = data.timss1, wgt = data.timss1[[1]]$TOTWGT, 
 #>     wgtrep = data.timssrep[, -1])
 #> 
-#> Date of Analysis: 2026-01-08 12:41:06.087558 
+#> Date of Analysis: 2026-01-09 04:20:06.583069 
 #> 
 #> Multiply imputed dataset
 #> 
@@ -303,7 +303,7 @@ summary(bdat2)
 #>  BIFIEsurvey::BIFIE.data(data.list = data.timss1, wgt = data.timss1[[1]]$TOTWGT, 
 #>     wgtrep = data.timssrep[, -1])
 #> 
-#> Date of Analysis: 2026-01-08 12:41:06.087558 
+#> Date of Analysis: 2026-01-09 04:20:06.583069 
 #> 
 #> Multiply imputed dataset
 #> 
@@ -329,7 +329,7 @@ summary(bdat1)
 #>  BIFIEsurvey::BIFIE.data(data.list = data.timss1, wgt = data.timss1[[1]]$TOTWGT, 
 #>     wgtrep = data.timssrep[, -1])
 #> 
-#> Date of Analysis: 2026-01-08 12:41:06.087558 
+#> Date of Analysis: 2026-01-09 04:20:06.583069 
 #> 
 #> Multiply imputed dataset
 #> 
@@ -362,9 +362,9 @@ summary(res1)
 #> Call:
 #> BIFIEsurvey::BIFIE.univar(BIFIEobj = bdat1, vars = "ASMMAT")
 #> 
-#> Date of Analysis: 2026-01-08 12:41:06.09782 
-#> Time difference of 0.02284527 secs
-#> Computation time: 0.02284527 
+#> Date of Analysis: 2026-01-09 04:20:06.59347 
+#> Time difference of 0.02257347 secs
+#> Computation time: 0.02257347 
 #> 
 #> Multiply imputed dataset
 #> 
@@ -393,9 +393,9 @@ summary(res2)
 #> Call:
 #> BIFIEsurvey::BIFIE.univar(BIFIEobj = bdat2, vars = "ASMMAT")
 #> 
-#> Date of Analysis: 2026-01-08 12:41:06.127402 
-#> Time difference of 0.02659369 secs
-#> Computation time: 0.02659369 
+#> Date of Analysis: 2026-01-09 04:20:06.622855 
+#> Time difference of 0.02706289 secs
+#> Computation time: 0.02706289 
 #> 
 #> Multiply imputed dataset
 #> 

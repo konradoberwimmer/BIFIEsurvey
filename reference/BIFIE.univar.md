@@ -134,9 +134,9 @@ summary(res1)
 #> BIFIEsurvey::BIFIE.univar(BIFIEobj = bdat, vars = c("ASMMAT", 
 #>     "ASSSCI", "books"))
 #> 
-#> Date of Analysis: 2026-01-08 12:41:15.146688 
-#> Time difference of 0.05879879 secs
-#> Computation time: 0.05879879 
+#> Date of Analysis: 2026-01-09 04:20:15.574455 
+#> Time difference of 0.05900264 secs
+#> Computation time: 0.05900264 
 #> 
 #> Multiply imputed dataset
 #> 
@@ -176,9 +176,9 @@ summary(res2)
 #> BIFIEsurvey::BIFIE.univar(BIFIEobj = bdat, vars = c("ASMMAT", 
 #>     "ASSSCI"), group = "books", group_values = 1:5)
 #> 
-#> Date of Analysis: 2026-01-08 12:41:15.21095 
-#> Time difference of 0.04411364 secs
-#> Computation time: 0.04411364 
+#> Date of Analysis: 2026-01-09 04:20:15.63925 
+#> Time difference of 0.04411197 secs
+#> Computation time: 0.04411197 
 #> 
 #> Multiply imputed dataset
 #> 
@@ -267,9 +267,9 @@ summary(res1a)
 #> BIFIEsurvey::BIFIE.univar(BIFIEobj = bdat1, vars = c("ASMMAT", 
 #>     "ASSSCI", "books"), se = FALSE)
 #> 
-#> Date of Analysis: 2026-01-08 12:41:15.286116 
-#> Time difference of 0.002153397 secs
-#> Computation time: 0.002153397 
+#> Date of Analysis: 2026-01-09 04:20:15.715469 
+#> Time difference of 0.002285719 secs
+#> Computation time: 0.002285719 
 #> 
 #> Multiply imputed dataset
 #> 
@@ -299,9 +299,9 @@ summary(res1b)
 #> BIFIEsurvey::BIFIE.univar(BIFIEobj = bdat1, vars = c("ASMMAT", 
 #>     "ASSSCI", "books"))
 #> 
-#> Date of Analysis: 2026-01-08 12:41:15.288868 
-#> Time difference of 0.01307774 secs
-#> Computation time: 0.01307774 
+#> Date of Analysis: 2026-01-09 04:20:15.718371 
+#> Time difference of 0.01407671 secs
+#> Computation time: 0.01407671 
 #> 
 #> Multiply imputed dataset
 #> 
@@ -338,9 +338,9 @@ summary(res2)
 #> BIFIEsurvey::BIFIE.univar(BIFIEobj = bdat1, vars = c("ASMMAT", 
 #>     "ASSSCI"), group = "books")
 #> 
-#> Date of Analysis: 2026-01-08 12:41:15.3098 
-#> Time difference of 0.009895563 secs
-#> Computation time: 0.009895563 
+#> Date of Analysis: 2026-01-09 04:20:15.7407 
+#> Time difference of 0.01075888 secs
+#> Computation time: 0.01075888 
 #> 
 #> Multiply imputed dataset
 #> 

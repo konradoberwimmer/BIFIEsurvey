@@ -126,9 +126,9 @@ summary(res1)
 #> BIFIEsurvey::BIFIE.correl(BIFIEobj = bdat, vars = c("lang", "books", 
 #>     "migrant"), group = "female", group_values = 0:1)
 #> 
-#> Date of Analysis: 2026-01-08 12:40:53.979985 
-#> Time difference of 0.1903565 secs
-#> Computation time: 0.1903565 
+#> Date of Analysis: 2026-01-09 04:19:57.295811 
+#> Time difference of 0.1905982 secs
+#> Computation time: 0.1905982 
 #> 
 #> Multiply imputed dataset
 #> 
@@ -183,9 +183,9 @@ summary(res1a)
 #> BIFIEsurvey::BIFIE.correl(BIFIEobj = bdat, vars = c("lang", "books", 
 #>     "migrant"), group = "female", group_values = 0:1, se = FALSE)
 #> 
-#> Date of Analysis: 2026-01-08 12:40:54.175394 
-#> Time difference of 0.008180618 secs
-#> Computation time: 0.008180618 
+#> Date of Analysis: 2026-01-09 04:19:57.4916 
+#> Time difference of 0.008228302 secs
+#> Computation time: 0.008228302 
 #> 
 #> Multiply imputed dataset
 #> 

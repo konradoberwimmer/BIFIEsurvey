@@ -91,9 +91,9 @@ summary(res1)
 #> BIFIEsurvey::BIFIE.univar(BIFIEobj = bdat, vars = c("ASMMAT", 
 #>     "ASSSCI", "scsci"), group = "books")
 #> 
-#> Date of Analysis: 2026-01-08 12:41:15.656383 
-#> Time difference of 0.06618762 secs
-#> Computation time: 0.06618762 
+#> Date of Analysis: 2026-01-09 04:20:16.105173 
+#> Time difference of 0.06650496 secs
+#> Computation time: 0.06650496 
 #> 
 #> Multiply imputed dataset
 #> 
@@ -181,9 +181,9 @@ summary(tres1)
 #> Call:
 #> BIFIEsurvey::BIFIE.univar.test(BIFIE.method = res1)
 #> 
-#> Date of Analysis: 2026-01-08 12:41:15.729692 
-#> Time difference of 0.005145788 secs
-#> Computation time: 0.005145788 
+#> Date of Analysis: 2026-01-09 04:20:16.179198 
+#> Time difference of 0.005308628 secs
+#> Computation time: 0.005308628 
 #> 
 #> Multiply imputed dataset
 #> 
@@ -282,9 +282,9 @@ summary(res2)
 #> BIFIEsurvey::BIFIE.univar(BIFIEobj = bdat, vars = c("ASMMAT"), 
 #>     group = "female")
 #> 
-#> Date of Analysis: 2026-01-08 12:41:15.743568 
-#> Time difference of 0.02263546 secs
-#> Computation time: 0.02263546 
+#> Date of Analysis: 2026-01-09 04:20:16.193358 
+#> Time difference of 0.02331042 secs
+#> Computation time: 0.02331042 
 #> 
 #> Multiply imputed dataset
 #> 
@@ -320,9 +320,9 @@ summary(tres2)
 #> Call:
 #> BIFIEsurvey::BIFIE.univar.test(BIFIE.method = res2)
 #> 
-#> Date of Analysis: 2026-01-08 12:41:15.772296 
-#> Time difference of 0.001671314 secs
-#> Computation time: 0.001671314 
+#> Date of Analysis: 2026-01-09 04:20:16.223195 
+#> Time difference of 0.001785994 secs
+#> Computation time: 0.001785994 
 #> 
 #> Multiply imputed dataset
 #> 
