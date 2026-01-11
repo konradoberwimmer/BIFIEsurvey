@@ -71,7 +71,7 @@ summary(bdat1)
 #>  BIFIEsurvey::BIFIE.data(data.list = data.timss1, wgt = data.timss1[[1]]$TOTWGT, 
 #>     wgtrep = data.timssrep[, -1])
 #> 
-#> Date of Analysis: 2026-01-09 04:19:52.528852 
+#> Date of Analysis: 2026-01-11 08:35:09.043404 
 #> 
 #> Multiply imputed dataset
 #> 
@@ -107,7 +107,7 @@ summary(bdat1)
 #>  BIFIEsurvey::BIFIE.data(data.list = data.timss1, wgt = data.timss1[[1]]$TOTWGT, 
 #>     wgtrep = data.timssrep[, -1])
 #> 
-#> Date of Analysis: 2026-01-09 04:19:52.528852 
+#> Date of Analysis: 2026-01-11 08:35:09.043404 
 #> 
 #> Multiply imputed dataset
 #> 
@@ -134,7 +134,7 @@ summary(bdat2)
 #>     wgtrep = data.timssrep[, -1])
 #> Compact BIFIEdata
 #> 
-#> Date of Analysis: 2026-01-09 04:19:52.534351 
+#> Date of Analysis: 2026-01-11 08:35:09.049492 
 #> 
 #> Multiply imputed dataset
 #> 
@@ -160,7 +160,7 @@ summary(bdat3)
 #>  BIFIEsurvey::BIFIE.data(data.list = data.timss1, wgt = data.timss1[[1]]$TOTWGT, 
 #>     wgtrep = data.timssrep[, -1])
 #> 
-#> Date of Analysis: 2026-01-09 04:19:52.534351 
+#> Date of Analysis: 2026-01-11 08:35:09.049492 
 #> 
 #> Multiply imputed dataset
 #> 

@@ -119,7 +119,7 @@ summary(bdat1)
 #>  BIFIEsurvey::BIFIE.data.jack(data = data.timss3, jktype = "JK_TIMSS", 
 #>     pv_vars = pv_vars)
 #> 
-#> Date of Analysis: 2026-01-09 04:20:07.092976 
+#> Date of Analysis: 2026-01-11 08:35:21.016473 
 #> 
 #> Multiply imputed dataset
 #> 
@@ -153,7 +153,7 @@ summary(bdat2)
 #> Call:
 #>  BIFIEsurvey::BIFIE.data.jack(data = data.timss3, jktype = "JK_TIMSS")
 #> 
-#> Date of Analysis: 2026-01-09 04:20:07.10007 
+#> Date of Analysis: 2026-01-11 08:35:21.236629 
 #> 
 #> Multiply imputed dataset
 #> 
@@ -195,7 +195,7 @@ summary(bdat1)
 #>  BIFIEsurvey::BIFIE.data.jack(data = data.test1, jktype = "JK_RANDOM", 
 #>     ngr = 50)
 #> 
-#> Date of Analysis: 2026-01-09 04:20:07.108985 
+#> Date of Analysis: 2026-01-11 08:35:21.244416 
 #> 
 #> Multiply imputed dataset
 #> 
@@ -225,9 +225,9 @@ summary(stat1)
 #> Call:
 #> BIFIEsurvey::BIFIE.univar(BIFIEobj = bdat1, vars = "math", group = "stratum")
 #> 
-#> Date of Analysis: 2026-01-09 04:20:07.112166 
-#> Time difference of 0.003624201 secs
-#> Computation time: 0.003624201 
+#> Date of Analysis: 2026-01-11 08:35:21.247033 
+#> Time difference of 0.003029346 secs
+#> Computation time: 0.003029346 
 #> 
 #> Multiply imputed dataset
 #> 
@@ -272,7 +272,7 @@ summary(bdat2)
 #>  BIFIEsurvey::BIFIE.data.jack(data = data.test1, wgt = "wgtstud", 
 #>     jktype = "JK_RANDOM", ngr = 75, seed = 987)
 #> 
-#> Date of Analysis: 2026-01-09 04:20:07.13133 
+#> Date of Analysis: 2026-01-11 08:35:21.257308 
 #> 
 #> Multiply imputed dataset
 #> 
@@ -302,9 +302,9 @@ summary(stat2)
 #> Call:
 #> BIFIEsurvey::BIFIE.univar(BIFIEobj = bdat2, vars = "math", group = "stratum")
 #> 
-#> Date of Analysis: 2026-01-09 04:20:07.133656 
-#> Time difference of 0.003625631 secs
-#> Computation time: 0.003625631 
+#> Date of Analysis: 2026-01-11 08:35:21.259583 
+#> Time difference of 0.003527641 secs
+#> Computation time: 0.003527641 
 #> 
 #> Multiply imputed dataset
 #> 
@@ -349,7 +349,7 @@ summary(bdat3)
 #>  BIFIEsurvey::BIFIE.data.jack(data = data.test1, wgt = "wgtstud", 
 #>     jktype = "JK_GROUP", jkzone = "idclass")
 #> 
-#> Date of Analysis: 2026-01-09 04:20:07.144519 
+#> Date of Analysis: 2026-01-11 08:35:21.270279 
 #> 
 #> Multiply imputed dataset
 #> 
@@ -379,9 +379,9 @@ summary(stat3)
 #> Call:
 #> BIFIEsurvey::BIFIE.univar(BIFIEobj = bdat3, vars = "math", group = "stratum")
 #> 
-#> Date of Analysis: 2026-01-09 04:20:07.146839 
-#> Time difference of 0.003840208 secs
-#> Computation time: 0.003840208 
+#> Date of Analysis: 2026-01-11 08:35:21.272535 
+#> Time difference of 0.003930092 secs
+#> Computation time: 0.003930092 
 #> 
 #> Multiply imputed dataset
 #> 
@@ -427,7 +427,7 @@ summary(bdat4)
 #>  BIFIEsurvey::BIFIE.data.jack(data = dataList, wgt = "wgtstud", 
 #>     jktype = "JK_GROUP", jkzone = "idclass")
 #> 
-#> Date of Analysis: 2026-01-09 04:20:07.158839 
+#> Date of Analysis: 2026-01-11 08:35:21.284548 
 #> 
 #> Multiply imputed dataset
 #> 

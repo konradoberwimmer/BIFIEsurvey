@@ -96,9 +96,9 @@ summary(res1)
 #> BIFIEsurvey::BIFIE.mva(BIFIEobj = BIFIEdata, missvars = c("scsci", 
 #>     "books"), covariates = c("ASMMAT", "female", "ASSSCI"))
 #> 
-#> Date of Analysis: 2026-01-09 04:20:13.509382 
-#> Time difference of 0.1264596 secs
-#> Computation time: 0.1264596 
+#> Date of Analysis: 2026-01-11 08:35:28.157541 
+#> Time difference of 0.1308637 secs
+#> Computation time: 0.1308637 
 #> 
 #> Multiply imputed dataset
 #> 
@@ -141,9 +141,9 @@ summary(res2)
 #> BIFIEsurvey::BIFIE.mva(BIFIEobj = BIFIEdata, missvars = c("scsci", 
 #>     "books"), se = FALSE)
 #> 
-#> Date of Analysis: 2026-01-09 04:20:13.639684 
-#> Time difference of 0.01079106 secs
-#> Computation time: 0.01079106 
+#> Date of Analysis: 2026-01-11 08:35:28.292394 
+#> Time difference of 0.01096869 secs
+#> Computation time: 0.01096869 
 #> 
 #> Multiply imputed dataset
 #> 

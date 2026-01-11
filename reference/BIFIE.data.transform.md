@@ -109,9 +109,9 @@ summary(res1)
 #> BIFIEsurvey::BIFIE.univar(BIFIEobj = bifieobj, vars = c("books_sq", 
 #>     "books_cub"))
 #> 
-#> Date of Analysis: 2026-01-09 04:20:07.732148 
-#> Time difference of 0.04546976 secs
-#> Computation time: 0.04546976 
+#> Date of Analysis: 2026-01-11 08:35:21.850585 
+#> Time difference of 0.0435555 secs
+#> Computation time: 0.0435555 
 #> 
 #> Multiply imputed dataset
 #> 

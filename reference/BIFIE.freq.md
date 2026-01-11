@@ -106,9 +106,9 @@ summary(res1)
 #> BIFIEsurvey::BIFIE.freq(BIFIEobj = bdat, vars = c("lang", "books", 
 #>     "migrant"))
 #> 
-#> Date of Analysis: 2026-01-09 04:20:11.580211 
-#> Time difference of 0.06267548 secs
-#> Computation time: 0.06267548 
+#> Date of Analysis: 2026-01-11 08:35:25.971501 
+#> Time difference of 0.3153992 secs
+#> Computation time: 0.3153992 
 #> 
 #> Multiply imputed dataset
 #> 
@@ -156,9 +156,9 @@ summary(res2)
 #> BIFIEsurvey::BIFIE.freq(BIFIEobj = bdat, vars = c("lang", "books", 
 #>     "migrant"), group = "female", group_values = 0:1)
 #> 
-#> Date of Analysis: 2026-01-09 04:20:11.647032 
-#> Time difference of 0.06311345 secs
-#> Computation time: 0.06311345 
+#> Date of Analysis: 2026-01-11 08:35:26.291337 
+#> Time difference of 0.06330109 secs
+#> Computation time: 0.06330109 
 #> 
 #> Multiply imputed dataset
 #> 
@@ -226,9 +226,9 @@ summary(res3)
 #> BIFIEsurvey::BIFIE.freq(BIFIEobj = bdat, vars = c("lang", "books", 
 #>     "migrant"), group = c("likesc", "female"))
 #> 
-#> Date of Analysis: 2026-01-09 04:20:11.714895 
-#> Time difference of 0.09195828 secs
-#> Computation time: 0.09195828 
+#> Date of Analysis: 2026-01-11 08:35:26.359272 
+#> Time difference of 0.0707655 secs
+#> Computation time: 0.0707655 
 #> 
 #> Multiply imputed dataset
 #> 
